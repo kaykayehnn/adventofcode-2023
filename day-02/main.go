@@ -8,13 +8,13 @@ import (
 	"time"
 )
 
-func check(e error){
+func check(e error) {
 	if e != nil {
 		panic(e)
 	}
 }
 
-var delimiters = []rune {
+var delimiters = []rune{
 	':',
 	',',
 	' ',
@@ -26,7 +26,7 @@ func split(r rune) bool {
 }
 
 func main() {
-	bytes,err := os.ReadFile("input.txt")
+	bytes, err := os.ReadFile("input.txt")
 	check(err)
 
 	input := string(bytes)
@@ -35,11 +35,11 @@ func main() {
 	start := time.Now()
 	task1(lines)
 
-	duration1:= time.Since(start)
+	duration1 := time.Since(start)
 	start = time.Now()
-	
+
 	task2(lines)
-	duration2	:= time.Since(start)
+	duration2 := time.Since(start)
 
 	fmt.Println("Task 1:", duration1)
 	fmt.Println("Task 2:", duration2)

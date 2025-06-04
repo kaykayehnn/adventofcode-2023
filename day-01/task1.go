@@ -19,7 +19,7 @@ func task1(lines []string) {
 		secondNumber, err := strconv.Atoi(lastMatch[1])
 		check(err)
 
-		number := firstNumber * 10 + secondNumber
+		number := firstNumber*10 + secondNumber
 		sum += number
 	}
 

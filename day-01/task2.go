@@ -9,7 +9,7 @@ import (
 )
 
 func task2(lines []string) {
-	nums := []string {"_zero_", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
+	nums := []string{"_zero_", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
 	numsRegex := strings.Join(nums[:], "|")
 
 	firstRegex := regexp.MustCompile(fmt.Sprintf(`.*?(%s|\d)`, numsRegex))
@@ -28,8 +28,8 @@ func task2(lines []string) {
 		if lastNumIndex == -1 {
 			lastNumIndex, _ = strconv.Atoi(lastMatch[1])
 		}
-		
-		number := firstNumIndex * 10 + lastNumIndex
+
+		number := firstNumIndex*10 + lastNumIndex
 		sum += number
 	}
 
