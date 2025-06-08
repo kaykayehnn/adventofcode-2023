@@ -23,5 +23,5 @@ func task1(lines []string) {
 		}
 	}
 
-	fmt.Println("Task 1: xxxxxx")
+	fmt.Println(sum)
 }

@@ -43,6 +43,8 @@ func task2(lines []string) {
 						numStart := numIndex[1]
 						numEnd := numIndex[1]
 
+						// We need to walk backwards and forwards from the index to find
+						// the start and end of the number.
 						for !isOutOfBounds(lines, numRow, numStart-1) && isNum(lines[numRow][numStart-1]) {
 							numStart--
 						}
@@ -60,5 +62,5 @@ func task2(lines []string) {
 		}
 	}
 
-	fmt.Println("Task 2: xxxxxx")
+	fmt.Println(sum)
 }
